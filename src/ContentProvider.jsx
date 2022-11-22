@@ -10,12 +10,14 @@ import { Box, Container } from '@mui/system';
 import { AppBar, Tab, Tabs, Toolbar } from '@mui/material';
 import React from 'react';
 import TOS from './pages/tos/TOS';
+import Privacy from './pages/privacy/Privacy';
+import Contact from './pages/contact/Contact';
 
 function ContentProvider() {
 
     let navigator = useNavigate();
     let location = useLocation();
-    const tabs = ["/", "/terms"];
+    const tabs = ["/", "/terms", "/privacy", "/contact"];
     const index = tabs.findIndex(el => el === location.pathname);
     const [value, setValue] = React.useState( index === -1 ? 0 : index);
 
@@ -32,6 +34,8 @@ function ContentProvider() {
                         <Tabs onChange={(_, i) => handleChange(i)} value={value}  >
                             <Tab label="Home" />
                             <Tab label="Terms of Service" />
+                            <Tab label="Privacy Policy" />
+                            <Tab label="Contact" />
                         </Tabs>
                     </Toolbar>
 
@@ -46,6 +50,8 @@ function ContentProvider() {
                     <Routes>
                         <Route key={0} path="/" element={<Home />} />
                         <Route key={0} path="/terms" element={<TOS />} />
+                        <Route key={0} path="/privacy" element={<Privacy />} />
+                        <Route key={0} path="/contact" element={<Contact />} />
                         <Route key={0} path="*" element={<Home />} />
                     </Routes>
                 </Container>
