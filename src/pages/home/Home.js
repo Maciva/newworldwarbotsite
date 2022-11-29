@@ -27,11 +27,9 @@ function Home() {
                         </ListItem>
                         <ListItem>
                             <Typography component="div" >
-                                2. Create a textchannel named
-                                <Box style={{ fontFamily: 'Monospace' }} display='inline' > war-bot </Box>
-                                and type
-                                <Box style={{ fontFamily: 'Monospace' }} display='inline' > !help </Box>
-                                in there for further instructions
+                                Type
+                                <Box style={{ fontFamily: 'Monospace' }} display='inline' > /help </Box>
+                                in a textchannel for further instructions
                             </Typography>
                         </ListItem>
                     </List>
