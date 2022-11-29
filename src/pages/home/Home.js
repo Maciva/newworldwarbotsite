@@ -14,7 +14,7 @@ function Home() {
                         </ListItem>
                         <ListItem>
                             <Button
-                                href="https://discord.com/oauth2/authorize?client_id=962099365672001586&permissions=3155968&scope=bot"
+                                href="https://discord.com/oauth2/authorize?client_id=962099365672001586&permissions=3155968&scope=applications.commands%20bot"
                                 variant="contained"
                                 size="large"
                                 style={{
